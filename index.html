@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnderMail</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f6fa;
+      color: #222;
+      min-height: 100vh;
+    }
+
+    .header {
+      height: 70px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      padding: 0 30px;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #6b3fa0;
+    }
+
+    .logo span {
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      min-height: calc(100vh - 70px);
+    }
+
+    .sidebar {
+      width: 230px;
+      background: white;
+      border-right: 1px solid #ddd;
+      padding: 25px 15px;
+    }
+
+    .compose {
+      width: 100%;
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: #6b3fa0;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 25px;
+    }
+
+    .compose:hover {
+      background: #593386;
+    }
+
+    .nav-button {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 5px;
+      border: none;
+      background: transparent;
+      text-align: left;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .nav-button:hover {
+      background: #f0edf5;
+    }
+
+    .nav-button.active {
+      background: #eee7f5;
+      font-weight: bold;
+      color: #6b3fa0;
+    }
+
+    .main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .welcome {
+      background: white;
+      border-radius: 15px;
+      padding: 35px;
+      border: 1px solid #ddd;
+    }
+
+    .welcome h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .welcome p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+    .ender-symbol {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .sidebar {
+        width: 180px;
+      }
+
+      .main {
+        padding: 15px;
+      }
+
+      .header {
+        padding: 0 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      Ender<span>Mail</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <aside class="sidebar">
+
+      <button class="compose">
+        ✉ Compose
+      </button>
+
+      <button class="nav-button active">
+        📥 Inbox
+      </button>
+
+      <button class="nav-button">
+        📤 Sent
+      </button>
+
+    </aside>
+
+    <main class="main">
+
+      <div class="welcome">
+
+        <div class="ender-symbol">🔐</div>
+
+        <h1>Welcome to EnderMail</h1>
+
+        <p>
+          A simple messaging system where your messages
+          are protected by your personal Ender Code.
+        </p>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
